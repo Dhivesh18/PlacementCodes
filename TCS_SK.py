@@ -11,6 +11,7 @@ print(a)
 '''
 Question 2
 '''
+# 1st method
 def fun(i):    
     temp,t=0,[]
     while i!=0:
@@ -27,19 +28,9 @@ for i in a:
     c+= 1 if fun(i)<=1 else 0
 print(c)
 
-# mi=int(input())
-# ma=int(input())
-# a=[i for i in range(mi,ma+1)]
-# c=0
-# for i in a:
-#     if i not in [1,2,3,4,5,6,7,8,9,10]:
-#         t=i
-#         s=[]
-#         while i!=0:
-#             r=i%10
-#             i=i//10
-#             s.append(r)
-#         if len(s)==1:
-#             print(t,c)
-#             c+=1
-# print(len(a)-c)
+# 2nd method
+m,n,c=11,15,0
+a=[i for i in range(m,n+1)]
+for i in a:
+    c+=1 if len(set(str(i)))==len(str(i)) else 0
+print(c)
