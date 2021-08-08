@@ -1,6 +1,6 @@
 '''
 Question 1
-'''
+# '''
 mi=input()
 a=[int(input()) for i in range(mi)]
 k=int(input())
@@ -30,7 +30,7 @@ print(c)
 
 # 2nd method
 m,n,c=11,15,0
-a=[i for i in range(m,n+1)]
+a=[str(i) for i in range(m,n+1)]
 for i in a:
-    c+=1 if len(set(str(i)))==len(str(i)) else 0
+    c+=1 if len(set(i))==len(i) else 0
 print(c)

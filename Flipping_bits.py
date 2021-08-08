@@ -9,3 +9,4 @@ print(a)
 q = "".join('1' if a[i]=='0' else '0' for i in range(32))
 print(q)
 print(int(q,2))
+

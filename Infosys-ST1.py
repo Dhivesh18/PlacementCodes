@@ -1,12 +1,10 @@
 '''
 Sample Test 1 - RPG game Infosys Online Test
 '''
-c=0
-n=int(input("Enter the No. of monster "))
-e=int(input("Enter the Initial Experience "))
+c,n,e=0,int(input("Enter the No. of monster ")),int(input("Enter the Initial Experience "))
 p=[int(input("Enter the power of monsters ")) for i in range(n)]
 b=[int(input("Enter the bonus of monsters ")) for i in range(n)]
-d=[[p[i],b[i]]for i in range(n)]
+d=[(p[i],b[i]) for i in range(n)]
 d.sort()
 for i,j in d:
     if e>=i:
@@ -17,10 +15,17 @@ print(c)
 '''
 Sample Test 1 - Unique Birthday Gift Infosys Online Test 
 '''
-a=int(input("Enter max"))
+import itertools
+n=int(input("Enter max"))
 k=int(input("Length of array"))
-if k!=1:    
-    b=[[j,i] for j in range(1,a+1) for i in range(1,a+1) if i%j==0] 
-else: 
-    b=[[i] for i in range(1,a+1)]
-print(len(b))
+p,l=[p for p in itertools.product([i+1 for i in range(n)], repeat=k)],0 # this allows repetition
+for i in p: 
+    c=0
+    for j in range(k):
+        try:
+            if i[j+1]%i[j]==0:                
+                c+=1            
+        except IndexError:
+            pass
+    l+=1 if c==k-1 else 0
+print(l)
