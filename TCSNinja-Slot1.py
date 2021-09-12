@@ -13,8 +13,7 @@ print(x-y if x>=y else x-y)
 # Question 3
 x,s=10,""
 if x<=100:
-    a=bin(x).replace("0b","")
-    for i in a:
+    for i in bin(x).replace("0b",""):
         s+= "0" if i=="1" else "1"  
     print(int(s,2))
 else:
