@@ -32,11 +32,27 @@
 #     if i==math.pow(int(math.sqrt(i)),2):
 #         print(i)
 
-s="101a0sd1000001"   # input   
-# s="1000010101"       # input
-k=s.split("1")
-print(sum(1 if len(i)==i.count("0") and i!="" else 0 for i in k))
+# s="101a0sd1000001"   # input   
+# # s="1000010101"       # input
+# k=s.split("1")
+# print(sum(1 if len(i)==i.count("0") and i!="" else 0 for i in k))
 
-import numpy
+# n,a=[8,3,6],[12,34,45,8,12,6,7,14] # Ouput : 71
+# print(sum(a[n[1]-1:n[2]]))
+
+# a,b=input(),['!','@','#','$','%','^','&','*']
+# print(sum(1 if i in b else 0 for i in a))
+
+
+
+# n=['a','b','c','d']
+# m=n
+# k=n[:]
+# m[0]='A'
+# k[1]='B'
+# print(n)
+# print(m)
+# print(k)
+
 
 
