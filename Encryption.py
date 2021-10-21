@@ -1,34 +1,20 @@
 import math
-import os
-import random
-import re
-import sys
 
 s = "haveaniceday"
-s.replace(" ","")
-q = len(s)
-w = q**0.5
-d,m=math.modf(w)
-if d != 0.0:
-    w+=1
+s.replace(" ","") 
+w = len(s)**0.5
+d,_=math.modf(w)
+w+=1 if d != 0.0 else 0
 w=int(w)
-a=[]
-j=0
 new=""
-for _ in range(w):
-    f=j+w
-    a.append(s[j:f])
-    j+=w
+a=[s[j:j+w] for j in range(0,w**2,w)]
 if a == "":
     a.remove("")
 for j in range(w):
     for t in range(w):
         try:  
-            k=a[t]
-            new+=k[j]
+            new+=a[t][j]
         except IndexError:
             pass
     new+=" "
 print(new)
-
-
