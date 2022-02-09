@@ -15,4 +15,3 @@ else:
 if not b:
     b="Not Possible"
     print(b)
-    

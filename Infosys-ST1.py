@@ -2,8 +2,8 @@
 Sample Test 1 - RPG game Infosys Online Test
 '''
 c,n,e=0,int(input("Enter the No. of monster ")),int(input("Enter the Initial Experience "))
-p=[int(input("Enter the power of monsters ")) for i in range(n)]
-b=[int(input("Enter the bonus of monsters ")) for i in range(n)]
+p=[int(input("Enter the power of monsters ")) for _ in range(n)]
+b=[int(input("Enter the bonus of monsters ")) for _ in range(n)]
 d=[(p[i],b[i]) for i in range(n)]
 d.sort()
 for i,j in d:
