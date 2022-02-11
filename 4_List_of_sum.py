@@ -1,0 +1,1 @@
+print(sum(int(input("Enter number")) for _ in range(int(input("Enter the Length of the list")))))

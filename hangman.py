@@ -1,4 +1,5 @@
-from random import choice, randint
+from random import choice
+# , randint
 def wordfun():
     wordlist=["Dhivesh","Sanjay", "Dollu", "Avinash"]
     return choice(wordlist)
